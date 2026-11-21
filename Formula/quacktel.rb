@@ -7,11 +7,12 @@ class Quacktel < Formula
   homepage "https://github.com/quacktel/cli"
   version "0.2.0-rc.3"
   license "Apache-2.0"
-  depends_on :linux
+  depends_on :macos
 
-  if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/quacktel/cli/releases/download/v0.2.0-rc.3/quacktel_linux_arm64.tar.gz"
-    sha256 "13d0d9e7299bd118767ef2687bb1b8269376d801228f8d997ef6c7e9fa5412ff"
+  if Hardware::CPU.arm?
+    url "https://github.com/quacktel/cli/releases/download/v0.2.0-rc.3/quacktel_darwin_arm64.tar.gz"
+    sha256 "75307543b16f5b39e76f80ca67c96e1794d5f791611f2fb2def867dbca42648a"
+
     define_method(:install) do
       bin.install "quacktel"
     end
