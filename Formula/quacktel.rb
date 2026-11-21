@@ -5,13 +5,13 @@
 class Quacktel < Formula
   desc "Local OpenTelemetry sink for coding agents, stored as Parquet, queried via MCP"
   homepage "https://github.com/quacktel/cli"
-  version "0.1.0-rc.3"
+  version "0.1.0-rc.4"
   license "Apache-2.0"
   depends_on :macos
 
   if Hardware::CPU.arm?
-    url "https://github.com/quacktel/cli/releases/download/v0.1.0-rc.3/quacktel_darwin_arm64.tar.gz"
-    sha256 "02e118398b781c0e22b17b9670f3a43e31b8615eb102f57ac86e611c6b746fad"
+    url "https://github.com/quacktel/cli/releases/download/v0.1.0-rc.4/quacktel_darwin_arm64.tar.gz"
+    sha256 "8824ea1841d7fd209b659a5e1c217235589a42d17e8ab7f5dfbff8eea75b8e36"
 
     define_method(:install) do
       bin.install "quacktel"
